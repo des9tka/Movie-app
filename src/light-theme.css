@@ -1,0 +1,234 @@
+body, html {
+    background-image: url("https://img.freepik.com/premium-photo/blurred-light-purple-pink-background-defocused-art-abstract-lilac-gradient-backdrop-with-blur-bokeh-blurry-wallpaper_113767-5465.jpg?w=2000");
+    backdrop-filter: blur(10px);
+}
+
+body.dark {
+    background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwcHBwcHBwcHBwcIBw0IBwcHCA8ICQcNFREWFxURExMYHSgiGBolJxMfLTQhMSk6LjQ2Fx8zODMsQygvMywBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIARMAtwMBIgACEQEDEQH/xAAaAAEBAQEBAQEAAAAAAAAAAAAAAQUEAwIH/8QANRABAAECAwMJBAsAAAAAAAAAAAECEQMEBSEx0RQiIyQlNUFRkRIyNEQTNkJDUmFxcoGT0v/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD8NAAAAAAAAFARQAABBQEFQAAAAAAAAAAAFAAAAAAAAAAAABBUAAAAAAAABQAAAAAAUEAAAAAAABBUAAAAAUAAAAAAUAAAABFAQAAAAAEAAABQAAAAAFRQAAAAAAQVAAAAAAAQAFAAAAAAVFAAAAAAARUAAAAAABAAUAAAAABUAUAAAAAEAAAAAAABAAFRQAAAAAAUR2ZvK04OT07MU7JzWHi1VXm83prmn02A5AQAAAAAAAAAAEAAVFAAAAAAAbWpU9g6FX5U41PrjYvBitzUfq9o0bOb7U7PzxcfgDDAAAAAAAAAAABAAAAUAAAAABtahPYunU7dmDg1R/OLm+DFbmoR2Lktvy2WmP7c2DDAAAAAAAAAABAAAAAFQBQAAAG7no7Hy+74LK1T5z0uY4sJuZqYnS6Kb0Xp0vLVTHtReesYn+gYYAAAAAAAAAIAAAAAAACiKAAA28xV1CKb09yYMxF4v8VPFiNfHmeSUxaO4sON9/m43eQMgAAAAAAABAAAAAAAAAAAAVAFaeLMTlotNM20aiKrT7vWYZjvrqvl4j2p7spptE3+/vaQcAAAAAACAAAAAAAAAAAAAAAA7Lx9FTsvPIpjmzu6Te43TE9FT4zyeqI2R+KQcyoAogAAAAAAAAAAAAAAAAAAA949ym+3o6/Dc8HrE8yn9lUA8gAAAAAAAAAAAAAAAAAAAAAHpE82P0qeb7+zHnaQfAAAAAAAAAAAAAAAAAAAAAAD68PV8r4AgAAAAAAAAAAAAAAAAAAAAAC+AAgAAAAAAAAAAAP/2Q==");
+}
+
+.PageCounter {
+    color: darkcyan;
+}
+
+.Header {
+    background: lightskyblue;
+    border: 1px solid black;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+.MovieCard {
+    background: lightskyblue;
+    border: 1px solid black;
+    margin: 25px;
+    width: 300px;
+    height: 500px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+img {
+    width: 200px;
+    height: 300px;
+    border-radius: 25px;
+}
+
+.MoviesWrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.OneMovieWrap {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.MoviePage {
+    height: 500px;
+    width: 400px;
+}
+
+.OneMovieWrapBox {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text {
+    border: 1px solid black;
+    background: #61dafb;
+    border-radius: 25px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.BtnWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.ChangeTheme {
+    border: none;
+    color: white;
+    background-color: maroon;
+    border-radius: 5px;
+    box-shadow: inset #282c34;
+    transition: ease-out 0.3s;
+    font-size: 1.5rem;
+    outline: none;
+    margin: 5px;
+}
+
+.ChangeTheme:hover {
+    box-shadow: inset 200px 0 0 0 darkorange;
+    cursor: pointer;
+    color: black;
+}
+
+.firstBtn {
+    border: none;
+    color: white;
+    background-color: maroon;
+    border-radius: 5px;
+    box-shadow: inset #282c34;
+    transition: ease-out 0.3s;
+    font-size: 1.5rem;
+    outline: none;
+    margin: 5px;
+}
+
+.firstBtn:hover {
+    box-shadow: inset 150px 0 0 0 darkorange;
+    cursor: pointer;
+    color: black;
+}
+
+.secondBtn {
+    border: none;
+    color: white;
+    background-color: maroon;
+    border-radius: 5px;
+    box-shadow: inset #282c34;
+    transition: ease-out 0.3s;
+    font-size: 1.5rem;
+    outline: none;
+    margin: 5px;
+}
+
+.secondBtn:hover {
+    box-shadow: inset 150px 0 0 0 darkorange;
+    cursor: pointer;
+    color: black;
+}
+
+.hBtn1 {
+    border: none;
+    color: white;
+    background-color: maroon;
+    border-radius: 5px;
+    box-shadow: inset #282c34;
+    transition: ease-out 0.3s;
+    font-size: 2rem;
+    outline: none;
+    margin: 5px;
+}
+
+.hBtn1:hover {
+    box-shadow: inset 200px 0 0 0 darkorange;
+    cursor: pointer;
+    color: black;
+}
+
+.hBtn2 {
+    border: none;
+    color: white;
+    background-color: maroon;
+    border-radius: 5px;
+    box-shadow: inset #282c34;
+    transition: ease-out 0.3s;
+    font-size: 2rem;
+    outline: none;
+    margin: 5px;
+}
+
+.hBtn2:hover {
+    box-shadow: inset 200px 0 0 0 darkorange;
+    cursor: pointer;
+    color: black;
+}
+
+.movieInfoBtn {
+    border: none;
+    color: white;
+    background-color: maroon;
+    border-radius: 5px;
+    box-shadow: inset #282c34;
+    transition: ease-out 0.3s;
+    font-size: 1rem;
+    outline: none;
+    margin: 5px;
+}
+
+.movieInfoBtn:hover {
+    box-shadow: inset 100px 0 0 0 darkorange;
+    cursor: pointer;
+    color: black;
+}
+
+hr {
+    border: none
+}
+
+.avatar {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+
+.MainPageWrap {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 50px;
+    width: 250px;
+    height: 100px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    vertical-align: center;
+    background: lightskyblue;
+}
+
+.Main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
+}
+
+.Main2 {
+    height: 105px;
+    width: 300px;
+}
+
+.PageMain {
+    height: 1080px;
+}
