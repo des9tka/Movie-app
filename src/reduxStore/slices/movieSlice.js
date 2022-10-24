@@ -1,6 +1,6 @@
 import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 
-import {moviesService} from "../../services/movies.service";
+import {moviesService} from "../../services";
 
 
 export const showMovies =  createAsyncThunk(
@@ -35,11 +35,29 @@ export const showMovie =  createAsyncThunk(
     }
 )
 
+export const findMovie =  createAsyncThunk(
+    'movieSlice/findMovie',
+
+    async ({query}, {rejectWithValue, dispatch}) => {
+        try {
+            const {data} = await moviesService.find(query);
+            dispatch(FIND_MOVIE(data));
+            console.log(data)
+        } catch (e) {
+            const err = e;
+            return rejectWithValue(err.response?.data);
+        }
+    }
+)
+
+
 const initialState = {
     movies:[],
     page: 1,
     pages: null,
-    movie: null
+    movie: null,
+    filtMovies: [],
+    findMovies: []
 }
 
 const movieSlice = createSlice({
@@ -57,7 +75,17 @@ const movieSlice = createSlice({
         },
         SET_MOVIE: (state,action) => {
             state.movie = action.payload
-        }
+        },
+        SET_FILTMOVIES: (state,action) => {
+            state.filtMovies.push(action.payload.movie)
+        },
+        DELETE_FILTMOVIES: (state,action) => {
+            state.filtMovies.pop(action.payload)
+        },
+        FIND_MOVIE: (state,action) => {
+            state.findMovies = state.findMovies + action.payload
+        },
+
     },
     extraReducers: {
         [showMovies.pending]: () => console.log('pending'),
@@ -67,7 +95,7 @@ const movieSlice = createSlice({
 });
 
 const movieReducer = movieSlice.reducer;
-export const {SET_MOVIES, CHANGE_PAGE, UPDATE_PAGES, SET_MOVIE} = movieSlice.actions;
+export const {SET_MOVIES, CHANGE_PAGE, UPDATE_PAGES, SET_MOVIE, SET_FILTMOVIES, DELETE_FILTMOVIES, FIND_MOVIE} = movieSlice.actions;
 
 export {
     movieReducer

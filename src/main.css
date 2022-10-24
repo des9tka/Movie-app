@@ -1,6 +1,5 @@
 body, html {
     background-image: url("https://img.freepik.com/premium-photo/blurred-light-purple-pink-background-defocused-art-abstract-lilac-gradient-backdrop-with-blur-bokeh-blurry-wallpaper_113767-5465.jpg?w=2000");
-    backdrop-filter: blur(10px);
 }
 
 body.dark {
@@ -9,6 +8,57 @@ body.dark {
 
 .PageCounter {
     color: darkcyan;
+}
+
+.Span {
+    min-height: 100px;
+}
+
+.Adult {
+    display: flex;
+    justify-content: end;
+}
+
+.red {
+    background: red;
+    border-radius: 25px;
+    height: 25px;
+    width: 25px;
+    margin: 5px;
+}
+
+.green {
+    background: green;
+    border-radius: 25px;
+    height: 25px;
+    width: 25px;
+    margin: 5px;
+}
+
+.GenresList{
+    justify-content: space-evenly;
+}
+
+.SwitchPageBtn {
+    width: 100px;
+    height: 30px;
+    position: fixed;
+    top: 15px;
+    left: 30px;
+    color: white;
+    background-color: maroon;
+    border-radius: 5px;
+    box-shadow: inset #282c34;
+    transition: ease-out 0.1s;
+    font-size: 1rem;
+    outline: none;
+    margin: 5px;
+}
+
+.SwitchPageBtn:hover {
+    box-shadow: inset 150px 0 0 0 darkorange;
+    cursor: pointer;
+    color: black;
 }
 
 .Header {
@@ -21,6 +71,9 @@ body.dark {
     text-align: center;
     justify-content: center;
     border-radius: 25px;
+    position: fixed;
+    top: 5px;
+    margin: 3px;
 }
 
 .MovieCard {
@@ -31,6 +84,8 @@ body.dark {
     height: 500px;
     text-align: center;
     border-radius: 25px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 img {
@@ -76,9 +131,11 @@ img {
     margin-right: 300px;
 }
 
+.cardText {
+    font-size: medium;
+}
+
 .BtnWrap {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     text-align: center;
 }
@@ -102,15 +159,19 @@ img {
 }
 
 .firstBtn {
-    border: none;
+    border: 1px solid black;
     color: white;
     background-color: maroon;
     border-radius: 5px;
     box-shadow: inset #282c34;
-    transition: ease-out 0.3s;
+    transition: ease-out 0.1s;
     font-size: 1.5rem;
     outline: none;
     margin: 5px;
+    position: fixed;
+    left: 0;
+    top: 70px;
+
 }
 
 .firstBtn:hover {
@@ -120,21 +181,28 @@ img {
 }
 
 .secondBtn {
-    border: none;
+    border: 1px solid black;
     color: white;
     background-color: maroon;
     border-radius: 5px;
     box-shadow: inset #282c34;
-    transition: ease-out 0.3s;
+    transition: ease-out 0.1s;
     font-size: 1.5rem;
     outline: none;
     margin: 5px;
+    position: fixed;
+    right: 0;
+    top: 70px;
 }
 
 .secondBtn:hover {
     box-shadow: inset 150px 0 0 0 darkorange;
     cursor: pointer;
     color: black;
+}
+
+.PageCounter {
+    right: 50%;
 }
 
 .hBtn1 {
@@ -231,4 +299,20 @@ hr {
 
 .PageMain {
     height: 1080px;
+}
+
+.GenresList {
+    display: flex;
+}
+
+.GenreCheckBox {
+    color: coral;
+}
+
+.FilteredMovie {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
 }

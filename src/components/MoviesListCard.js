@@ -20,12 +20,10 @@ const MoviesListCard = () => {
     function prevPage() {
         dispatch(CHANGE_PAGE(-1))
     }
-
     return (
         <div>
             <div className={'BtnWrap'}>
                 <button className={'firstBtn'} disabled={page === 1} onClick={() => prevPage()}>Prev page</button>
-                <h3 className={'PageCounter'}>PAGE : {page}</h3>
                 <button className={'secondBtn'}disabled={pages === pages+1 } onClick={() => nextPage()}>Next page</button>
             </div>
             <div className={'MoviesWrap'}>

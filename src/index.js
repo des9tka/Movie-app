@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 
-import * as css from "./light-theme.css";
+import "./main.css";
 
 import store from "./reduxStore/store";
 
