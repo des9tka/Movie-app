@@ -38,11 +38,26 @@ export const showMovie =  createAsyncThunk(
 export const findMovie =  createAsyncThunk(
     'movieSlice/findMovie',
 
-    async ({query}, {rejectWithValue, dispatch}) => {
+    async (query, {rejectWithValue, dispatch}) => {
         try {
-            const {data} = await moviesService.find(query);
+            console.log(query?.find)
+            const {data} = await moviesService.find(query?.find);
             dispatch(FIND_MOVIE(data));
-            console.log(data)
+            console.log(moviesService.find(query))
+        } catch (e) {
+            const err = e;
+            return rejectWithValue(err.response?.data);
+        }
+    }
+)
+
+export const showFindMovie =  createAsyncThunk(
+    'movieSlice/showFindMovie',
+
+    async ({id}, {rejectWithValue, dispatch}) => {
+        try {
+            const {data} = await moviesService.getById(id);
+            dispatch(SET_FINDMOVIE({data}));
         } catch (e) {
             const err = e;
             return rejectWithValue(err.response?.data);
@@ -57,8 +72,10 @@ const initialState = {
     pages: null,
     movie: null,
     filtMovies: [],
-    findMovies: []
+    findMovies: [],
+    allFindMovies: []
 }
+
 
 const movieSlice = createSlice({
     name: 'moviesSlice',
@@ -76,6 +93,9 @@ const movieSlice = createSlice({
         SET_MOVIE: (state,action) => {
             state.movie = action.payload
         },
+        SET_FINDMOVIE: (state,action) => {
+            state.allFindMovies.push(action.payload)
+        },
         SET_FILTMOVIES: (state,action) => {
             state.filtMovies.push(action.payload.movie)
         },
@@ -83,7 +103,7 @@ const movieSlice = createSlice({
             state.filtMovies.pop(action.payload)
         },
         FIND_MOVIE: (state,action) => {
-            state.findMovies = state.findMovies + action.payload
+            state.findMovies = action.payload
         },
 
     },
@@ -95,7 +115,7 @@ const movieSlice = createSlice({
 });
 
 const movieReducer = movieSlice.reducer;
-export const {SET_MOVIES, CHANGE_PAGE, UPDATE_PAGES, SET_MOVIE, SET_FILTMOVIES, DELETE_FILTMOVIES, FIND_MOVIE} = movieSlice.actions;
+export const {SET_MOVIES, CHANGE_PAGE, UPDATE_PAGES, SET_MOVIE, SET_FILTMOVIES, DELETE_FILTMOVIES, FIND_MOVIE, SET_FINDMOVIE} = movieSlice.actions;
 
 export {
     movieReducer
