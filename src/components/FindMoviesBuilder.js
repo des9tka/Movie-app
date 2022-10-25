@@ -12,6 +12,8 @@ const FindMoviesBuilder = ({id}) => {
         dispatch(showFindMovie({id}))
     },[])
 
+    let uniqueMovies = [...new Set(allFindMovies)];
+
     return (
         <div>
             {uniqueMovies.map(movie => <FindMovieBuilder movie={movie.data}/>)}
