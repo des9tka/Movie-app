@@ -10,7 +10,6 @@ const FindMoviesBuilder = ({id, find}) => {
 
     useEffect(() => {
         dispatch(showFindMovie({id, find}))
-        console.log(findMovies)
 },[])
 
     return (

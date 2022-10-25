@@ -56,6 +56,7 @@ export const showFindMovie =  createAsyncThunk(
     async ({id, find}, {rejectWithValue, dispatch}) => {
         try {
             const {data} = await moviesService.getById(id);
+            console.log(data)
             dispatch(SET_FINDMOVIE({data, find}));
         } catch (e) {
             const err = e;
