@@ -4,19 +4,18 @@ import {useDispatch, useSelector} from "react-redux";
 import {showFindMovie} from "../reduxStore";
 import {FindMovieBuilder} from "./FindMovieBuilder";
 
-const FindMoviesBuilder = ({id}) => {
-    const {allFindMovies} = useSelector(state => state.movies);
+const FindMoviesBuilder = ({id, find}) => {
+    const {allFindMovies,findMovies} = useSelector(state => state.movies);
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(showFindMovie({id}))
-    },[])
-
-    let uniqueMovies = [...new Set(allFindMovies)];
+        dispatch(showFindMovie({id, find}))
+        console.log(findMovies)
+},[])
 
     return (
         <div>
-            {uniqueMovies.map(movie => <FindMovieBuilder movie={movie.data}/>)}
+            {allFindMovies.map(movie => <FindMovieBuilder movie={movie}/>)}
         </div>
     )
 }

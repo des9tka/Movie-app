@@ -27,6 +27,7 @@ export const showMovie =  createAsyncThunk(
     async ({id}, {rejectWithValue, dispatch}) => {
         try {
             const {data} = await moviesService.getById(id);
+            console.log(data)
             dispatch(SET_MOVIE(data));
         } catch (e) {
             const err = e;
@@ -38,12 +39,10 @@ export const showMovie =  createAsyncThunk(
 export const findMovie =  createAsyncThunk(
     'movieSlice/findMovie',
 
-    async (query, {rejectWithValue, dispatch}) => {
+    async ({find : query}, {rejectWithValue, dispatch}) => {
         try {
-            console.log(query?.find)
-            const {data} = await moviesService.find(query?.find);
+            const {data} = await moviesService.find(query);
             dispatch(FIND_MOVIE(data));
-            console.log(moviesService.find(query))
         } catch (e) {
             const err = e;
             return rejectWithValue(err.response?.data);
@@ -54,10 +53,10 @@ export const findMovie =  createAsyncThunk(
 export const showFindMovie =  createAsyncThunk(
     'movieSlice/showFindMovie',
 
-    async ({id}, {rejectWithValue, dispatch}) => {
+    async ({id, find}, {rejectWithValue, dispatch}) => {
         try {
             const {data} = await moviesService.getById(id);
-            dispatch(SET_FINDMOVIE({data}));
+            dispatch(SET_FINDMOVIE({data, find}));
         } catch (e) {
             const err = e;
             return rejectWithValue(err.response?.data);
@@ -82,28 +81,29 @@ const movieSlice = createSlice({
     initialState,
     reducers: {
         SET_MOVIES: (state,action) => {
-            state.movies = action.payload
+            state.movies = action.payload;
         },
         CHANGE_PAGE: (state, action) => {
-            state.page += action.payload
+            state.page += action.payload;
         },
         UPDATE_PAGES: (state, action) => {
-            state.pages = action.payload
+            state.pages = action.payload;
         },
         SET_MOVIE: (state,action) => {
-            state.movie = action.payload
+            state.movie = action.payload;
         },
         SET_FINDMOVIE: (state,action) => {
-            state.allFindMovies.push(action.payload)
+                state.allFindMovies.push(action.payload.data);
         },
         SET_FILTMOVIES: (state,action) => {
-            state.filtMovies.push(action.payload.movie)
+            state.filtMovies.push(action.payload.movie);
         },
         DELETE_FILTMOVIES: (state,action) => {
-            state.filtMovies.pop(action.payload)
+            state.filtMovies.pop(action.payload);
         },
         FIND_MOVIE: (state,action) => {
-            state.findMovies = action.payload
+            state.findMovies = [];
+            state.findMovies = action.payload;
         },
 
     },

@@ -5,7 +5,7 @@ const urls = {
     movies:(query) =>  `/discover/movie?page=${query}`,
     genres: '/genre/movie/list',
     search:(params) =>  `/search/keyword?query=${params}`,
-    id: (id) => `https://api.themoviedb.org/3/movie/${id}`
+    id: (id) => `/movie/${id}`
 }
 
 
