@@ -1,7 +1,7 @@
-const FindMovieBuilder = () => {
+const FindMovieBuilder = ({movie}) => {
     return (
         <div>
-            FindMovieBuilder
+            {movie.id} - {movie.title}
         </div>
     )
 }
