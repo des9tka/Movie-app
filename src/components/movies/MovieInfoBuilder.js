@@ -11,7 +11,7 @@ const MovieInfoBuilder = ({movie}) => {
                 <hr/>
                 <p className={'text'}>STATUS: {movie?.status}</p>
                 <hr/>
-                <div className={'text genres'}>GENRES: {movie.genres.map(genre => <p>{genre.name}</p>)}</div>
+                <div className={'text genres'}>GENRES: {movie?.genres.map(genre => <p>{genre.name}</p>)}</div>
                 <hr/>
                 <p className={'text'}>BUDGET - {movie?.budget}$</p>
                 <hr/>
