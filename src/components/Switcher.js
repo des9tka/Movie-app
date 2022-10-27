@@ -7,7 +7,7 @@ const Switcher = () => {
                 if (theme === 'light'){
                 document.body.classList.toggle('dark')
                     } else {
-                    document.body.classList.toggle('body')
+                    document.body.classList.toggle('html, body')
                 }
             }}>Switcher</button>
         </div>

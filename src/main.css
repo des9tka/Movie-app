@@ -1,13 +1,20 @@
 body, html {
-    background-image: url("https://img.freepik.com/premium-photo/blurred-light-purple-pink-background-defocused-art-abstract-lilac-gradient-backdrop-with-blur-bokeh-blurry-wallpaper_113767-5465.jpg?w=2000");
+    background: pink;
+    background-repeat: repeat;
 }
 
-body.dark {
+html, body.dark {
     background: black;
+    background-repeat: repeat;
 }
 
 .PageCounter {
     color: darkcyan;
+}
+
+.moon {
+    height: 30px;
+    width: 30px;
 }
 
 .Span {
@@ -103,7 +110,7 @@ body.dark {
     border: 1px solid black;
     margin: 25px;
     width: 300px;
-    height: 500px;
+    height: 550px;
     text-align: center;
     border-radius: 25px;
     box-sizing: border-box;

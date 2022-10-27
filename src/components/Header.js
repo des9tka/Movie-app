@@ -11,6 +11,7 @@ const Header = () => {
             <Switcher/>
             <span className={'field'}></span>
             <PageCounter/>
+            <div className={'moon'}><i className="fa-regular fa-moon-stars"></i></div>
         </div>
     )
 }
