@@ -5,27 +5,27 @@ import {useState} from "react";
 const MoviesPage = () => {
     const [showMovie, setShowMovie] = useState(1)
     const [showCheckBox, setShowCheckBox] =useState(null)
-    const [search, setSearch] = useState(null)
+    const [showSearch, setShowSearch] = useState(null)
 
     const [page, setPage] = useState('FILTER')
 
 
     const show = () => {
-        if (showCheckBox == null && search == null) {
+        if (showMovie === 1) {
             setShowCheckBox(1)
             setShowMovie(null)
-            setSearch(null)
-            setPage("MOVIES")
-        } else if (showMovie == null && search == null) {
-            setShowCheckBox(null)
-            setShowMovie(1)
-            setSearch(null)
-            setPage("FILTER")
-        } else if (search == null && showCheckBox == null) {
+            setShowSearch(null)
+            setPage("SEARCH")
+        } else if (showCheckBox === 1) {
             setShowCheckBox(null)
             setShowMovie(null)
-            setSearch(1)
-            setPage("Search")
+            setShowSearch(1)
+            setPage("MOVIES")
+        } else if (showSearch === 1) {
+            setShowCheckBox(null)
+            setShowMovie(1)
+            setShowSearch(null)
+            setPage("FILTER")
         }
     }
 
@@ -34,8 +34,7 @@ const MoviesPage = () => {
             <div className={'Span'}></div>
             <Header/>
             <button className={'SwitchPageBtn'} onClick={() => show()}>{page}</button>
-
-            {search && <MovieSearch/>}
+            {showSearch && <MovieSearch/>}
             {showCheckBox && <GenresList/>}
             {showMovie && <MoviesListCard/>}
         </div>

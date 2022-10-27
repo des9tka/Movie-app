@@ -24,10 +24,12 @@ const MovieSearch = () => {
 
     return (
         <div>
-            <input placeholder="search the movie..." onChange={(e) => {
-                setFind(e.target.value)
-                deleteAllFindMovies()
-            }}/>
+            <div className={'searchWrap'}>
+                <input  className={'searchInput'} placeholder="search the movie..." onChange={(e) => {
+                    setFind(e.target.value)
+                    deleteAllFindMovies()
+                }}/>
+            </div>
             <div className={"MovieSearch"}>
                 {movies && movies.map((movie, index) => <MovieBuilder movie={movie} key={index}/>)}
             </div>
