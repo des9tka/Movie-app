@@ -1,20 +1,14 @@
 body, html {
     background: pink;
-    background-repeat: repeat;
+    min-height: 100vh;
 }
 
 html, body.dark {
     background: black;
-    background-repeat: repeat;
 }
 
 .PageCounter {
     color: darkcyan;
-}
-
-.moon {
-    height: 30px;
-    width: 30px;
 }
 
 .Span {
@@ -46,6 +40,7 @@ html, body.dark {
     text-align: center;
     background: #61dafb;
     color: black;
+    font-size: large;
 }
 
 .red {
@@ -132,32 +127,48 @@ img {
 }
 
 .OneMovieWrap {
-    width: 100%;
-    height: 100%;
+    width: 900px;
+    height: 900px;
     justify-content: center;
     align-items: center;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background: #282c34;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.genres {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
 }
 
 .MoviePage {
     height: 500px;
     width: 400px;
+    border: 1px solid #61dafb;
 }
 
 .OneMovieWrapBox {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
 .text {
-    border: 1px solid black;
-    background: #61dafb;
+    border: 1px solid coral;
+    background: lightskyblue;
     border-radius: 25px;
-    margin-left: 300px;
-    margin-right: 300px;
+    min-height: 35px;
+    width: 800px;
+    margin-left: 5%
 }
 
 .cardText {

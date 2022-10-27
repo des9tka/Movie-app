@@ -2,18 +2,18 @@ import {posterURL} from "../../configs";
 
 const MovieInfoBuilder = ({movie}) => {
 
-    console.log(movie)
-
     return (
         <div className={"OneMovieWrapBox"}>
             <div className={"OneMovieWrap"}>
                 <h3 className={'text'}>{movie?.original_title}</h3>
                 <hr/>
-                <p className={'text'}>overview - {movie?.overview}</p>
+                <p className={'text'}>OVERVIEW: {movie?.overview}</p>
                 <hr/>
-                <p className={'text'}>status -{movie?.status}</p>
+                <p className={'text'}>STATUS: {movie?.status}</p>
                 <hr/>
-                <p className={'text'}>budget - {movie?.budget}$</p>
+                <div className={'text genres'}>GENRES: {movie.genres.map(genre => <p>{genre.name}</p>)}</div>
+                <hr/>
+                <p className={'text'}>BUDGET - {movie?.budget}$</p>
                 <hr/>
                 <img className={'MoviePage'} src={`${posterURL}/${movie?.poster_path}`} alt={movie?.original_title}/>
             </div>
