@@ -24,14 +24,3 @@ const MovieInfoBuilder = ({movie}) => {
 export {
     MovieInfoBuilder
 }
-
-
-
-
-
-
-{/*{movie.adult}*/}
-{/*{movie.genres.name}*/}
-{/*{movie.budget}*/}
-{/*{movie.original_title}*/}
-{/*<img src={`${posterURL}${movie.poster_path}`} alt={movie.original_title}/>*/}

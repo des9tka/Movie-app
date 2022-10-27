@@ -1,9 +1,8 @@
 import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 
-import {findMovie} from "../reduxStore";
-import {FindMoviesBuilder} from "./FindMoviesBuilder";
-import {FindMovieBuilder} from "./FindMovieBuilder";
+import {findMovie, DELETE_FINDMOVIE} from "../reduxStore";
+import {MovieBuilder} from "./MovieBuilder";
 
 
 const MovieSearch = () => {
@@ -11,20 +10,27 @@ const MovieSearch = () => {
     const [find, setFind] = useState("");
     const {findMovies} = useSelector(state => state.movies);
 
-    let movies = findMovies.results;
+    console.log(findMovies)
 
-    console.log(movies)
+    const movies = findMovies.results
 
     useEffect(() => {
         dispatch(findMovie({find}))
     }, [find])
+
+    const deleteAllFindMovies = () => {
+        dispatch(DELETE_FINDMOVIE())
+    }
+
     return (
         <div>
-            <input placeholder="search the movie..." onChange={(e) => setFind(e.target.value)}/>
-            {/*{movies&&movies.map((movie, index) => <FindMoviesBuilder id={movie.id} find={find} key={index}/>)}*/}
-
-            {/*timeDecision*/}
-            {movies&&movies.map(movie => <FindMovieBuilder movie={movie} key={movie.id}/>)}
+            <input placeholder="search the movie..." onChange={(e) => {
+                setFind(e.target.value)
+                deleteAllFindMovies()
+            }}/>
+            <div className={"MovieSearch"}>
+                {movies && movies.map((movie, index) => <MovieBuilder movie={movie} key={index}/>)}
+            </div>
         </div>
     )
 }

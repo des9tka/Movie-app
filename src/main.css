@@ -19,6 +19,11 @@ body.dark {
     justify-content: end;
 }
 
+.MovieSearch {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .red {
     background: red;
     border-radius: 25px;
