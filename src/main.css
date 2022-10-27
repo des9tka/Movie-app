@@ -11,6 +11,10 @@ html, body.dark {
     color: darkcyan;
 }
 
+.PAGE {
+    margin-left: 650px;
+}
+
 .Span {
     min-height: 100px;
 }
@@ -257,6 +261,20 @@ img {
     margin: 5px;
 }
 
+.PS {
+    position: absolute;
+    bottom: 0px;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 25px;
+    background: #282c34;
+    color: pink;
+    height: 35px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
+
 .hBtn1:hover {
     box-shadow: inset 200px 0 0 0 darkorange;
     cursor: pointer;
@@ -273,6 +291,8 @@ img {
     font-size: 2rem;
     outline: none;
     margin: 5px;
+    margin-left: 650px;
+
 }
 
 .hBtn2:hover {
@@ -334,6 +354,10 @@ hr {
 .Main2 {
     height: 105px;
     width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .PageMain {
