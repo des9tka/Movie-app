@@ -334,8 +334,18 @@ hr {
     display: flex;
 }
 
+.image {
+    margin-bottom: 10px;
+}
+
+
 .GenreCheckBox {
     color: coral;
+    background: lightskyblue;
+    border-radius: 25px;
+    border: 1px solid black;
+    flex-wrap: wrap;
+    padding: 5px;
 }
 
 .FilteredMovie {
