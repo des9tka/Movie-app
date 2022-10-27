@@ -1,7 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 
-import {CHANGE_PAGE, showMovies} from "../reduxStore";
+import {CHANGE_PAGE, showMovies} from "../../reduxStore";
 import {MovieBuilder} from "./MovieBuilder";
 
 const MoviesListCard = () => {

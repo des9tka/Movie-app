@@ -1,4 +1,4 @@
-import {posterURL} from "../configs";
+import {posterURL} from "../../configs";
 
 const MovieInfoBuilder = ({movie}) => {
 

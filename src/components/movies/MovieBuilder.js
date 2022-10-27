@@ -1,7 +1,7 @@
 import {useNavigate} from "react-router-dom";
 import StarRatings from 'react-star-ratings';
 
-import {posterURL} from "../configs";
+import {posterURL} from "../../configs";
 
 
 const MovieBuilder = ({movie}) => {

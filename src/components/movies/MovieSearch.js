@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 
-import {findMovie, DELETE_FINDMOVIE} from "../reduxStore";
+import {findMovie, DELETE_FINDMOVIE} from "../../reduxStore";
 import {MovieBuilder} from "./MovieBuilder";
 
 

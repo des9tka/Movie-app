@@ -1,1 +1,2 @@
-export * from './movieSlice'
+export * from './movieSlice';
+export * from './genreSlice';

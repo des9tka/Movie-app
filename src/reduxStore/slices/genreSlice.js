@@ -1,7 +1,6 @@
 import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 
-import {genresService} from "../../services/genresService";
-
+import {genresService} from "../../services";
 
 export const showGenres =  createAsyncThunk(
     'genresSlice/showGenres',

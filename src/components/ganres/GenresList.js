@@ -1,9 +1,9 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 
-import {showGenres} from "../reduxStore/slices/genreSlice";
+import {showGenres} from "../../reduxStore";
 import {GenreCheckBox} from "./GenreCheckBox";
-import {MovieBuilder} from "./MovieBuilder";
+import {MovieBuilder} from "../movies/MovieBuilder";
 
 const GenresList = () => {
     const dispatch = useDispatch();

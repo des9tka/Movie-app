@@ -1,6 +1,7 @@
-import {Header, MoviesListCard, MovieSearch} from "../components";
-import {GenresList} from "../components/GenresList";
 import {useState} from "react";
+
+import {Header, MoviesListCard, MovieSearch} from "../components";
+import {GenresList} from "../components";
 
 const MoviesPage = () => {
     const [showMovie, setShowMovie] = useState(1)

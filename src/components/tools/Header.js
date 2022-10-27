@@ -1,4 +1,5 @@
 import {useNavigate} from "react-router-dom";
+
 import {Switcher} from "./Switcher";
 import {PageCounter} from "./PageCounter";
 

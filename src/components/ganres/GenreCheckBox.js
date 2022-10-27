@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import {DELETE_FILTMOVIES, SET_FILTMOVIES} from "../reduxStore";
+import {DELETE_FILTMOVIES, SET_FILTMOVIES} from "../../reduxStore";
 
 let status = false;
 
