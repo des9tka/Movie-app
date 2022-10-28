@@ -1,10 +1,12 @@
 body, html {
-    background: pink;
+    background-image: url("https://look.com.ua/pic/201711/1920x1080/look.com.ua-251406.jpg");
     min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 html, body.dark {
-    background: black;
+    background-image: url("https://wallpapercave.com/wp/wp10674100.jpg");
 }
 
 .PageCounter {
